@@ -1,0 +1,25 @@
+<div>
+
+    <h2>Popular Topics</h2>
+
+    <div>
+        <span>Find&nbsp;<label><input class="search" ng-model="searchText"></label></span>
+    </div>
+
+    <div class="table-responsive view">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Hits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="result in results | filter:searchText">
+                    <td>{{result.t.name}}</td><td>{{result.hits}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

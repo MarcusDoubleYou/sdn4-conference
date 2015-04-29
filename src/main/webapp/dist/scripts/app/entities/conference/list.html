@@ -1,0 +1,55 @@
+<div>
+
+    <h2>Conference</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveConferenceModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span>Create a new Conference</span>
+    </button>
+
+    <div class="modal fade" id="saveConferenceModal" tabindex="-1" role="dialog" aria-labelledby="myConferenceLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myConferenceLabel">Create or edit a Conference</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control"
+                                   ng-model="conference.name">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <span>Find&nbsp;<label><input class="search" ng-model="searchText"></label></span>
+    </div>
+
+    <div class="table-responsive view">
+        <table class="table table-striped">
+            <tbody>
+                <tr ng-repeat="conference in conferences | filter:searchText track by conference.id">
+                    <td><a ng-model="conference.name" ui-sref="conferenceDetail({id:conference.id})">{{conference.id}}:{{conference.name}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,16 +1,19 @@
 'use strict';
 
-angular.module('registrarApp', ['LocalStorageModule', 'tmh.dynamicLocale',
-    'ngResource', 'ui.router', 'ngCookies', 'pascalprecht.translate', 'ngCacheBuster', 'checklist-model'])
+angular.module('registrarApp', [
+        'LocalStorageModule',
+        'tmh.dynamicLocale',
+        'ngResource',
+        'ui.router',
+        'ngCookies',
+        'pascalprecht.translate',
+        'ngCacheBuster',
+        'checklist-model'])
 
     .run(function ($rootScope, $location, $http, $state, $translate, Auth, Principal, Language) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams) {
             $rootScope.toState = toState;
             $rootScope.toStateParams = toStateParams;
-
-//            if (Principal.isIdentityResolved()) {
-//                Auth.authorize();
-//            }
 
             // Update the language
             Language.getCurrent().then(function (language) {
@@ -40,29 +43,6 @@ angular.module('registrarApp', ['LocalStorageModule', 'tmh.dynamicLocale',
                 values.push(iterable[i].name);
             }
             return values.join(" ");
-        };
-
-        $rootScope.truncate = function(obj, depth) {
-//            for (var property in obj) {
-//                //console.log("depth: " + depth);
-//                //console.log(obj);
-//                //console.log("property: " + property);
-//                if (property == 'id' || property == 'name' || property == '$promise' || property == '$resolved' || property == '__proto__') {
-//                    continue;
-//                }
-//                if (depth == 0 || property == '$$hashKey') {
-//                    console.log("deleting " + property + " from " + obj);
-//                    delete obj[property];
-//                    //var p = obj[property];
-//                    //if (p && p.constructor === Array) {
-//                    //    obj[property] = [];
-//                    //} else {
-//                    //    obj[property] = null;
-//                    //}
-//                } else {
-//                    $rootScope.truncate(obj[property], depth -1);
-//                }
-//            }
         };
 
     })

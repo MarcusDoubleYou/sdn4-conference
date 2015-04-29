@@ -1,5 +1,6 @@
 body {
-    background: #fafafa;
+    background: #fff;
+
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -88,10 +89,11 @@ Browser Upgrade Prompt
 
 .logo {
     display: inline-block;
-    width: 45px;
-    height: 60px;
+    width: 180px;
+    height: 90px;
     margin-right: 10px;
-    background: url("../images/chevron-chief-crossbotony-233x300.png") no-repeat center top;
+    background:url("../images/spring-io.png") no-repeat center top;
+    //background: url("../images/chevron-chief-crossbotony-233x300.png") no-repeat center top;
     background-size: contain;
 }
 
@@ -122,8 +124,10 @@ Browser Upgrade Prompt
 .register {
     display: inline-block;
     width: 347px;
-    height: 450px;
-    background: url("../images/student-register.jpg") no-repeat center top;
+    height: 600px;
+    //background:url("../images/spring-io.jpeg") no-repeat center top;
+    //background: url("../images/student-register.jpg") no-repeat center top;
+    background: url("../images/auditorium.jpg") no-repeat center top;
     background-size: contain;
 }
 
@@ -136,7 +140,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .register {
-        background: url("../images/student-register.jpg") no-repeat center top;
+        //background: url("../images/student-register.jpg") no-repeat center top;
         background-size: contain;
     }
 }

@@ -1,0 +1,109 @@
+{
+    "talks" : [
+        {
+            "title": "12 Years of Spring: An Open Source Journey",
+            "abstract": "Spring emerged as a core open source project in early 2003 and evolved to a broad portfolio of open source projects up until 2015. This keynote reflects upon the journey so far, with a focus on the open source ecosystem that Spring lives within, including stories and anecdotes from the old days as well as from recent times. Not getting stuck in history, we’ll also look at the continuity of Spring’s philosophy and its immediate applicability to Java development challenges in 2015 and beyond.",
+            "topics":  ["keynote", "spring"],
+            "room": "Auditorium",
+            "timeslot": "Wed 29th, 09:30-10:30",
+            "speaker": {
+                "name": "Juergen Hoeller",
+                "bio": "Juergen Hoeller is co-founder of the Spring Framework open source project and has been serving as the project lead and release manager for the core framework since 2003. Juergen is an experienced software architect and consultant with outstanding expertise in code organization, transaction management and enterprise messaging.",
+                "twitter": "https://twitter.com/springjuergen",
+                "picture": "http://www.springio.net/wp-content/uploads/2014/11/juergen_hoeller-220x220.jpeg"
+            }
+
+        },
+        {
+            "title": "Building 'Bootiful' Applications with Spring Boot",
+            "abstract": "Alright, so maybe “bootiful” won’t ever work, but I tried, and it was worth it too because you’re reading this. Spring Boot, the new convention-over-configuration centric framework from the Spring team at Pivotal, marries Spring’s flexibility with conventional, common sense defaults to make application development not just fly,but pleasant! Join Spring developer advocate Josh Long (@starbuxman) for a look at what Spring Boot is, why it’s turning heads, why you should consider it for your next application (REST, web, batch, big-data, integration, whatever!) and how to get started.",
+            "topics":  ["springboot"],
+            "room": "Auditorium",
+            "timeslot": "Wed 29th, 11:00-11:50",
+            "speaker": {
+                "name": "Josh Long",
+                "bio": "Josh Long is the Spring Developer Advocate. Josh is the lead author on Apress’ Spring Recipes, 2nd Edition, the O’Reilly 'Pro Spring Roo'”' book, the Pearson 'Livelessons for Spring' and a committer on several Spring projects and the Activiti BPMN framework. When he’s not hacking on code, he can be found at the local Java User Group or at the local coffee shop. Josh likes solutions that push the boundaries of the technologies that enable them. Josh’s interests include big-data, mobile, REST, NoSQL and integration.",
+                "twitter": "https://twitter.com/starbuxman",
+                "picture": "http://www.springio.net/wp-content/uploads/2014/12/josh_long.jpeg"
+            }
+
+        },
+        {
+            "title": "Spring Batch for Large Enterprises Operations",
+            "abstract": "Spring Batch is widely used framework for running batch operations. Most of us used it or at least know what it does. However, to become really proficient in using any framework (Spring Batch is no exception) a lot of trial and error is required. We’ll try to present some of the best practices we established after extensive usage of Spring Batch in many projects (both big and small). Those practices are the result of some successful and some not so successful implementations.What are the challenges that we faced? What worked well and what failed or needed to be adapted? How did we manage to overcome difficulties posed by big corporate environments and legacy systems? We hope that you’ll get out of this session learning not only what to do but also what pitfalls to avoid depending on the context in which Spring Batch is running.",
+            "topics":  ["springbatch"],
+            "room": "Room 1",
+            "timeslot": "Wed 29th, 11:00-11:50",
+            "speaker": {
+                "name": "Ignasi Gonzalez",
+                "bio": "Ignasi Gonzalez is an Electronics & Computer Engineer with nearly 15 years of experience on the IT sector. He has experience as an operating systems teacher and, until the date, he has worked for large corporations in the financial sector, insurance and healthcare where he has led, designed and implemented comprehensive solutions. C, C ++ , Java , Spring , Hibernate , Groovy, Lucene are some of the technologies Ignasi has used in the projects he has been part of. Currently, Ignasi is a Project Leader in the architecture group everis .",
+                "picture": "http://www.springio.net/wp-content/uploads/2015/03/ignasi_gonzalez.jpg"
+            }
+        },
+        {
+            "title": "Mum, I want to be a Groovy full-stack developer",
+            "abstract": "How many times have you ever heard the term “Full-Stack developer”? In most of the cases it means that you have to be fluent with a backend language, html, javascript, maybe Android or iOS… What if I told you that you can be a Full-Stack developer using only Groovy?In this talk I’ll present the technological stack of Polaromatic, the application with I won the Learning Spring Boot contest, and you’ll learn that it’s possible to write the whole stack with Groovy: Backend, Javascript, HTML, Android, test, build tool,… Isn’t that amazing?",
+            "topics":  ["groovy", "html", "javascript", "android"],
+            "room": "Room 3",
+            "timeslot": "Wed 29th, 11:00-11:50",
+            "speaker": {
+                "name": "Iván López",
+                "bio": "Iván is a Software Engineer and Systems Administrator with 13 years of experience. He discovered Grails 5 years ago and since then he develops almost exclusively using Groovy. He is the creator of Bokzuy.com and some Grails plugins like Postgresql-Extensions and Slug-Generator.He’s also the coordinator of the Madrid Groovy User Group (@madridgug) and the co-organizer of the Greach Conference (http://greachconf.com).",
+                "twitter": "https://twitter.com/ilopmar",
+                "picture": "http://www.springio.net/wp-content/uploads/2015/02/ivan_lopez.jpg"
+            }
+        },
+        {
+            "title": "Using Groovy to empower WebRTC Network Systems (Workshop) ",
+            "abstract": "This workshop introduces to WebRTC and how you can utilize its open API to develop Rich Communication services in your web applications. It describes a general Java gateway to allow the translation of WebRTC to SIP, the protocol used internally in the majority of VoIP networks and how Groovy is used to empower the process. In the end of the workshop, the assistants will be able to develop and deploy a basic webpage and they will have the knowledge to customize the example and develop more complex features, adding audio, video or data to HTML5, iOS or Android applications.",
+            "topics":  ["groovy", "webrtc", "workshop"],
+            "room": "Room 2",
+            "timeslot": "Wed 29th, 11:00-12:50",
+            "speaker": {
+                "name": "Antón R. Yuste",
+                "bio": "An engineer in telecommunication by professional education, I work today as Telecom Solutions Architect for Optare Solutions. I mainly focus on helping local and global network operators to tune up their networks getting ready for the era of digital services. This includes not only the latest Oracle Communications technologies within the domains of WebRTC or API Exposure but also the know-how and best practices in guiding operators trough their process of network transformation and service evolution.",
+                "twitter": "https://twitter.com/antonmry",
+                "picture": "http://www.springio.net/wp-content/uploads/2015/03/anton_rodriguez.jpg"
+            }
+        },
+        {
+            "title": "Spring 4 Web Applications",
+            "abstract": "Spring MVC is among the most active areas of the Spring Framework with plenty of community-driven features and refinements. The 4.x generation (including 4.0, 4.1 and the upcoming 4.2) are no exception. This talk provides an overview of the areas in which the framework has and continues to evolve.",
+            "topics":  ["spring", "mvc"],
+            "room": "Auditorium",
+            "timeslot": "Wed 29th, 12:00-12:50",
+            "speaker": {
+                "name": "Rossen Stoyanchev",
+                "bio": "Spring Framework committer",
+                "twitter": "https://twitter.com/rstoya05",
+                "picture": "http://www.springio.net/wp-content/uploads/2014/11/rossen_stoyanchev.jpeg"
+            }
+        },
+        {
+            "title": "Boot your Search with Spring ",
+            "abstract": "Search has become a major part in our applications. We want to find, quick and easy! This session focuses on integrating search solutions like Solr, Elasticsearch as well as MongoDBs full text search into your application. We’ll have a look on Spring Data’s abstraction for those and do some hands on auto configuration using Spring Boot (100% XML free setup guaranteed).",
+            "topics":  ["springboot", "springdata"],
+            "room": "Room 1",
+            "timeslot": "Wed 29th, 12:00-12:50",
+            "speaker": {
+                "name": "Christoph Strobl",
+                "bio": "Christoph Strobl joined the Spring Data Team in early 2014 after spending quite some time as Engineer in the telecommunication industry. He’s the project lead Spring Data Solr and currently also keeps an eye on Spring Data abstractions for redis and mongodb. His passion is around design and testing having special interest in search and web.",
+                "twitter": "https://twitter.com/stroblchristoph",
+                "picture": "http://www.springio.net/wp-content/uploads/2015/02/christoph_strobl.png"
+            }
+        },
+        {
+            "title": "Isomorphic templating with Spring Boot, Nashorn and React",
+            "abstract": "After an introduction presenting the upcoming Spring Framework 4.2 Script Templating support, this talk will show, with code samples, how to develop an application performing the same templates rendering on client AND server based on Spring Boot, Nashorn and Javascript based template engines like React (the latest game changer Javascript library released by Facebook). The rendering of Javascript templates is performed initially on server-side thanks to a Spring MVC + Nashorn integration, then enriched on client side with a push mechanism (Websocket or Server-Sent Events). This kind of isomorphic templating + the disruptive innovation brought by React with his virtual DOM mechanism make it possible to build a new kind of applications : responsive, with a great UX while being accessible.",
+            "topics":  ["springboot", "nashorn", "react"],
+            "room": "Room 3",
+            "timeslot": "Wed 29th, 12:00-12:50",
+            "speaker": {
+                "name": "Sébastien Deleuze",
+                "bio": "Sébastien works at Pivotal as a Spring engineering team member. He mostly works on Spring MVC, the Websocket support and the integration with client side technologies. He has previously created 2 Open Source projects : OpenScales (the leading Flex maps library) and RESThub (HTML5 stack based on Spring + Backbone.js).",
+                "twitter": "https://twitter.com/sdeleuze",
+                "picture": "http://www.springio.net/wp-content/uploads/2015/01/sebastien_deleuze.jpeg"
+            }
+        }
+    ]
+}

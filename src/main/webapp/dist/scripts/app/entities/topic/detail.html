@@ -1,0 +1,84 @@
+<div>
+    <h2><span>Topic</span> {{topic.id}}:{{topic.name}}</h2>
+    <div class="table-responsive">
+        <form name="form"
+              role="form"
+              novalidate
+              class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+              ng-controller="TopicController">
+
+            <div>
+                <button ui-sref="topic" class="btn btn-info">
+                    <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+                </button>
+
+                <button type="submit" ng-click="create()" ui-sref="topic" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                </button>
+
+                <button type="submit" ng-click="delete(topic.id)" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                </button>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th translate="entity.detail.field">Field</th>
+                        <th translate="entity.detail.value">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>Name</span></td>
+                        <td><input type="text" class="input-sm form-control" ng-model="topic.name" value="{{topic.name}}"></td>
+                    </tr>
+
+                    <!-- todo show other details here -->
+                    <tr>
+                        <td><span>Sessions</span></td>
+                        <td>
+                            <div class="well view">
+                                <div ng-controller="SessionController">
+                                    <div ng-repeat="session in sessions track by session.id" >
+                                        <label><input type="checkbox" class="form control pull-left" checklist-model="topic.sessions" checklist-value="session" />&nbsp;{{session.name}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div class="modal fade" id="deleteTopicConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-controller="TopicController">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete Topic {{topic.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+
+                        <button type="button" class="btn btn-danger" ng-click="confirmDelete(topic.id)">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
