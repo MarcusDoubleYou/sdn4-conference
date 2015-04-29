@@ -9,6 +9,7 @@ import java.util.Set;
  */
 public class Session extends Entity {
 
+    @Relationship(type="AT_TIMESLOT", direction= Relationship.OUTGOING)
     private Timeslot timeslot;
 
     @Relationship(type="IN_TRACK", direction= Relationship.OUTGOING)

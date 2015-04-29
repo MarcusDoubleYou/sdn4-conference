@@ -53,6 +53,22 @@
                         <td>
                     </tr>
 
+                    <tr>
+                        <td>Slot</td>
+                        <td>
+                            <div class="form-group">
+                                <div ng-controller="TimeslotController">
+                                    <select class="form-control input-sm" ng-model="session.timeslot" ng-change="objectifyTeacher()">
+                                        <option ng-selected="timeslot.name == session.timeslot.name"
+                                                ng-repeat="timeslot in timeslots track by timeslot.id" value="{{timeslot}}" >
+                                            {{timeslot.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        <td>
+                    </tr>
+
                     <!-- multi-select -->
                     <tr>
                         <td><span>Speakers</span></td>
