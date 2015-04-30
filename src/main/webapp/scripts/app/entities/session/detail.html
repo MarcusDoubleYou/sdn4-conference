@@ -21,7 +21,7 @@
                 </button>
             </div>
 
-            <table class="table table-striped">
+            <table class="table">
                 <thead>
                     <tr>
                         <th translate="entity.detail.field">Field</th>
@@ -33,6 +33,25 @@
                         <td><span>Name</span></td>
                         <td><input type="text" class="input-sm form-control" ng-model="session.name" value="{{session.name}}"></td>
                     </tr>
+
+                    <tr>
+                        <td>Speakers</td>
+                        <td>
+                            <div ng-repeat="presenter in session.presenters">
+                                <label><span>{{presenter.name}}</span></label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Topics</td>
+                        <td>
+                            <div ng-repeat="topic in session.topics">
+                                <label><span>{{topic.name}}</span></label>
+                            </div>
+                        </td>
+                    </tr>
+
 
                     <!-- show other details here -->
 
@@ -70,34 +89,122 @@
                     </tr>
 
                     <!-- multi-select -->
+                    <!--
                     <tr>
-                        <td><span>Speakers</span></td>
+                        <td><span>Change Speakers</span></td>
                         <td>
-                            <div class="well view">
-                                <div ng-controller="SpeakerController">
-                                    <div ng-repeat="speaker in speakers track by speaker.id" >
-                                        <label><input type="checkbox" class="form control pull-left" checklist-model="session.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
-                                    </div>
+                            <div ng-controller="SpeakerController">
+                                <div ng-repeat="speaker in speakers track by speaker.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
                                 </div>
                             </div>
                         </td>
                     </tr>
 
                     <tr>
-                        <td><span>Topics</span></td>
+                        <td><span>Change Topics</span></td>
                         <td>
-                            <div class="well view">
-                                <div ng-controller="TopicController">
-                                    <div ng-repeat="topic in topics track by topic.id" >
-                                        <label><input type="checkbox" class="form control pull-left" checklist-model="session.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
-                                    </div>
+                            <div ng-controller="TopicController">
+                                <div ng-repeat="topic in topics track by topic.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
                                 </div>
                             </div>
                         </td>
                     </tr>
+                    -->
 
                 </tbody>
             </table>
+
+            <div class="panel-group" id="speakerAccordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="javascript:;" data-toggle="collapse" data-parent="#speakerAccordion" data-target="#collapseSpeaker">
+                            <label><span>Select speakers</span></label>
+                        </a>
+                    </div>
+                    <div id="collapseSpeaker" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-controller="SpeakerController">
+                                <div ng-repeat="speaker in speakers track by speaker.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group" id="topicAccordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="javascript:;" data-toggle="collapse" data-parent="#topicAccordion" data-target="#collapseTopic">
+                            <label><span>Select topics</span></label>
+                        </a>
+                    </div>
+                    <div id="collapseTopic" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-controller="TopicController">
+                                <div ng-repeat="topic in topics track by topic.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div ng-controller="SpeakerController">
+                <div ng-repeat="speaker in speakers track by speaker.id" >
+                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                </div>
+            </div>
+
+            <div ng-controller="TopicController">
+                <div ng-repeat="topic in topics track by topic.id" >
+                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                </div>
+            </div>
+            -->
+
+            <!--
+            <accordion close-others="true">
+                <accordion-group heading="Change speakers" is-open="false">
+                    <div ng-repeat="speaker in speakers track by speaker.id" >
+                        <label><input type="checkbox" class="form control pull-left" checklist-model="session.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Change topics" is-open="false">
+                    <div ng-repeat="topic in topics track by topic.id" >
+                        <label><input type="checkbox" class="form control pull-left" checklist-model="session.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                    </div>
+                </accordion-group>
+            </accordion>
+            -->
+            <!--
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="javascript:;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+                                Set topics
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-controller="TopicController">
+                                <div ng-repeat="topic in topics track by topic.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="session.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
         </form>
     </div>
 
