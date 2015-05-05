@@ -1,0 +1,61 @@
+Venue,Room,Date,Starttime,Endtime,Speaker,Position,Company,Title,Track,Topic
+etc. Liverpool Street,Broadgate 2,20150506,900,1700,Alistair Jones,Developer,Neo Technology,Fundamentals,Training,Cypher;Modeling
+etc. Liverpool Street,Broadgate 2,20150506,900,1700,Stefan Kolmar,Field Engineer,Neo Technology,Fundamentals,Training,Cypher;Modeling
+etc. Liverpool Street,Broadgate,20150506,900,1700,Pieter Cailliau,Field Engineer,Neo Technology,Data Modeling,Training,Cypher;Modeling
+etc. Liverpool Street,Broadgate,20150506,900,1700,Ian Robinson,DEveloper,Neo Technology,Data Modeling,Training,Cypher;Modeling
+etc. Liverpool Street,London Wall,20150506,900,1230,Gabe Stanek,Field Engineer,Neo Technology,Advanced Cypher,Training,Cypher;Modeling;Import
+etc. Liverpool Street,London Wall,20150506,900,1230,David Montag,Field Engineer,Neo Technology,Advanced Cypher,Training,Cypher;Modeling;Import
+Apex Hotel,Apex Hotel - dedicated room,20150506,1930,2200,Erik Nolten,Director Partner Program,Neo Technology,Partner Dinner,Networking,
+Doggets Coat and Badge,Top Floor Terrace Bar,20150506,1100,1700,Michael Hunger,Developer Evangelist,Neo Technology,Ecosystem Partner Summit,Community,Ecosystem;Drivers;Development
+Doggets Coat and Badge,Top Floor Terrace Bar,20150506,1830,2200,Michael Hunger,Developer Evangelist,Neo Technology,Hackathon,Community,Election;Development
+Doggets Coat and Badge,Top Floor Terrace Bar,20150506,1830,2200,Alberto Perdomo,CEO,GrapheneDB,Hackathon,Community,Election;Development
+etc. Liverpool Street,Reception area,20150507,830,915,,,,Registration & Coffee,Fika,
+etc. Liverpool Street,Keynote,20150507,915,930,Holger Temme,Director Central Europe & Middle East,Neo Technology,Welcome & Introduction to GraphConnect,Keynote,
+etc. Liverpool Street,Keynote,20150507,915,930,Rik Van Bruggen,Director Northern Europe,Neo Technology,Welcome & Introduction to GraphConnect,Keynote
+etc. Liverpool Street,Keynote,20150507,930,1015,Emil Eifrem,CEO,Neo Technology,Opening Keynote,Keynote
+etc. Liverpool Street,Keynote,20150507,1015,1030,Utpal Bhatt,VP Marketing,Neo Technology,Neo4j typical use cases,Keynote
+etc. Liverpool Street,Reception area,20150507,1030,1045,,,,Coffee break,Fika
+etc. Liverpool Street,Broadgate 2,20150507,1045,1115,Hans Verhoef,Architect,Royal Netherlands Meteorological Institute,Monitoring using 'Big Data' tooling (Network & IT Management),Business Impact Track
+etc. Liverpool Street,Broadgate 2,20150507,1115,1145,Matt Wright,CTO,Stitched.io,Social - Superpowers for Recruitment,Business Impact Track
+etc. Liverpool Street,Broadgate,20150507,1045,1115,Oliver Tigges,,InnoQ,Software dependency analysis with graph databases (Neo4j),Community Track
+etc. Liverpool Street,Broadgate,20150507,1115,1145,Lorenzo Speranzoni,,LARUS Business Automation Srl,Managing Connected Big Data in Art with Neo4j Graph Database,Community Track
+etc. Liverpool Street,London Wall,20150507,1045,1115,Ian Robinson,Engineer,Neo Technology,From Zero to Graph: Model,Practictioner Track
+etc. Liverpool Street,London Wall,20150507,1115,1145,Philip Rathle,VP Product,Neo Technology,Deep dive into product roadmap,Practictioner Track
+etc. Liverpool Street,Reception area,20150507,1145,1200,,,,Coffee break,Fika
+etc. Liverpool Street,Broadgate 2,20150507,1200,1230,Nicolas Rouyer,Architect,Orange,Predict Incidents with Neo4j (Network  & IT Management),Business Impact Track
+etc. Liverpool Street,Broadgate 2,20150507,1230,1300,Brendan Madden,CEO,Tom Sawyer,Graph Visualisation and Analysis,Business Impact Track
+etc. Liverpool Street,Broadgate,20150507,1200,1230,David Simons,,Softwire,Graph Theory in Practice,Community Track
+etc. Liverpool Street,Broadgate,20150507,1230,1300,Felienne Hermans,Professor,Delft University of Technology,Spreadsheets are graphs!,Community Track
+etc. Liverpool Street,London Wall,20150507,1200,1230,Mark Needham,Engineer,Neo Technology,From Zero to Graph: Import,Practictioner Track
+etc. Liverpool Street,London Wall,20150507,1230,1300,Vince Bickers ,Consultant,GraphAware,Spring Data Neo4j,Practictioner Track
+etc. Liverpool Street,London Wall,20150507,1230,1300,Michael Hunger,Developer Evangelist,Neo Technology,Spring Data Neo4j,Practictioner Track
+etc. Liverpool Street,Reception area,20150507,1300,1415,,,,Lunch,Fika
+etc. Liverpool Street,Broadgate 2,20150507,1415,1445,Aaron Wallace,Principal Product Manager,Pitney Bowes,Master Data Management,Business Impact Track
+etc. Liverpool Street,Broadgate 2,20150507,1445,1515,Tom Benedictus,CEO Trifork Leeds,Trifork,Realistic deep learning with Neo4j,Business Impact Track
+etc. Liverpool Street,Broadgate,20150507,1415,1445,Peter Wiles,,Chillisoft Solutions,Unlock value from the connectedness in existing relational data,Community Track
+etc. Liverpool Street,Broadgate,20150507,1445,1515,Axel Morgner,CEO,Structr,The Graph Application Platform,Community Track
+etc. Liverpool Street,London Wall,20150507,1415,1445,Nicole White,Data Scientist,Neo Technology,From Zero to Graph: Query,Practictioner Track
+etc. Liverpool Street,London Wall,20150507,1445,1515,Brian Underwood,Developer Evangelist,Neo Technology,From Zero to GraphGist,Practictioner Track
+etc. Liverpool Street,Reception area,20150507,1515,1530,,,,Coffee,Fika
+etc. Liverpool Street,Broadgate 2,20150507,1530,1600,Graham York,,Sentience,Graph-based search,Community Track
+etc. Liverpool Street,Broadgate 2,20150507,1600,1630,Sokratis Kartelias,Senior Project Manager,adidas,Delivering the most relevant and compelling digital content to adidas consumers (Recommendations),Business Impact Track
+etc. Liverpool Street,Broadgate,20150507,1530,1600,Sebastien Heymann,CEO,Linkurious,Large-scale graph visualization on the web,Community Track
+etc. Liverpool Street,Broadgate,20150507,1600,1630,Christophe Willemsen,Consultant,GraphAware,Graphgen - Graph prototyping made easy,Community Track
+etc. Liverpool Street,London Wall,20150507,1530,1600,Stefan Armbruster,Field Engineer,Neo Technology,From Zero to Graph: Scale,Practictioner Track
+etc. Liverpool Street,Reception area,20150507,1630,1645,,,,Coffee,Fika
+etc. Liverpool Street,Keynote,20150507,1645,1730,Jim Webber,Chief Scientist,Neo Technology,Closing Keynote - Impossible is nothing with Graphs,Keynote
+etc. Liverpool Street,Keynote,20150507,1730,1745,Holger Temme,Director Central Europe & Middle East,Neo Technology,Prize draw and wrap-up,Keynote
+etc. Liverpool Street,Keynote,20150507,1730,1745,Rik Van Bruggen,Director Northern Europe,Neo Technology,Prize draw and wrap-up,Keynote
+etc. Liverpool Street,Reception area,20150507,1745,2030,,,,GraphReception,Fika
+etc. Liverpool Street,GraphHospital,20150507,1045,1145,Ryan Boyd,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1045,1145,Brian Underwood,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1200,1300,Ryan Boyd,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1200,1300,Brian Underwood,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1415,1515,Ryan Boyd,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1415,1515,Michael Hunger,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1415,1515,Andreas Kolleger,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1530,1630,Ryan Boyd,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1530,1630,Michael Hunger,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1530,1630,Andreas Kolleger,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1730,2030,Brian Underwood,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
+etc. Liverpool Street,GraphHospital,20150507,1730,2030,Michael Hunger,,Neo Technology,Cypher / Visualization / Import / Modeling / Cluster / Driver / Java,GraphClinic
