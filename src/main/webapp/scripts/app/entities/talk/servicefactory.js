@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('registrarApp')
-    .factory('Session', function ($resource, $cacheFactory) {
+    .factory('Talk', function ($resource, $cacheFactory) {
 
-        var url = 'api/sessions/:id';
+        var url = 'api/talks/:id';
         var cache = $cacheFactory.get('$http');
 
         var interceptor = {

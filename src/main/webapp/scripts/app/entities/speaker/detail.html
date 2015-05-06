@@ -34,14 +34,23 @@
                         <td><input type="text" class="input-sm form-control" ng-model="speaker.name" value="{{speaker.name}}"></td>
                     </tr>
 
+                    <tr>
+                        <td>Talks</td>
+                        <td>
+                            <div ng-repeat="talk in speaker.talksPresented">
+                                <label><span>{{talk.name}}</span></label>
+                            </div>
+                        </td>
+                    </tr>
+
                     <!-- todo show other details here -->
                     <tr>
-                        <td><span>Sessions</span></td>
+                        <td><span>Change Talks for this Speaker</span></td>
                         <td>
                             <div class="well view">
-                                <div ng-controller="SessionController">
-                                    <div ng-repeat="session in sessions track by session.id" >
-                                        <label><input type="checkbox" class="form control pull-left" checklist-model="speaker.sessionsPresented" checklist-value="session" />&nbsp;{{session.name}}</label>
+                                <div ng-controller="TalkController">
+                                    <div ng-repeat="talk in talks track by talk.id" >
+                                        <label><input type="checkbox" class="form control pull-left" checklist-model="speaker.talksPresented" checklist-value="talk" />&nbsp;{{talk.name}}</label>
                                     </div>
                                 </div>
                             </div>

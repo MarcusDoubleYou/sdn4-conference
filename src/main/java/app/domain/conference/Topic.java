@@ -10,13 +10,13 @@ import java.util.Set;
 public class Topic extends Entity {
 
     @Relationship(type="HAS_TOPIC", direction= Relationship.INCOMING)
-    private Set<Session> sessions;
+    private Set<Talk> sessions;
 
-    public Set<Session> getSessions() {
+    public Set<Talk> getSessions() {
         return sessions;
     }
 
-    public void setSessions(Set<Session> sessions) {
+    public void setSessions(Set<Talk> sessions) {
         this.sessions = sessions;
     }
 }

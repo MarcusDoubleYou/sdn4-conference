@@ -3,29 +3,29 @@
 angular.module('registrarApp')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('session', {
+            .state('talk', {
                 parent: 'entity',
-                url: '/session',
+                url: '/talk',
                 data: {
                     roles: ['ROLE_USER']
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/entities/session/list.html',
-                        controller: 'SessionController'
+                        templateUrl: 'scripts/app/entities/talk/list.html',
+                        controller: 'TalkController'
                     }
                 }
             })
-            .state('sessionDetail', {
+            .state('talkDetail', {
                 parent: 'entity',
-                url: '/sessions/:id',
+                url: '/talks/:id',
                 data: {
                     roles: ['ROLE_USER']
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/entities/session/detail.html',
-                        controller: 'SessionDetailController'
+                        templateUrl: 'scripts/app/entities/talk/detail.html',
+                        controller: 'TalkDetailController'
                     }
                 }
             });

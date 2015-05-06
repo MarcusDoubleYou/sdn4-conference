@@ -1,0 +1,240 @@
+<div>
+    <h2><span>Talk</span> {{talk.id}}:{{talk.name}}</h2>
+    <div class="table-responsive">
+        <form name="form"
+              role="form"
+              novalidate
+              class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+              ng-controller="TalkController">
+
+            <div>
+                <button ui-sref="talk" class="btn btn-info">
+                    <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+                </button>
+
+                <button type="submit" ng-click="create()" ui-sref="talk" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                </button>
+
+                <button type="submit" ng-click="delete(talk.id)" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                </button>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th translate="entity.detail.field">Field</th>
+                        <th translate="entity.detail.value">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>Name</span></td>
+                        <td><input type="text" class="input-sm form-control" ng-model="talk.name" value="{{talk.name}}"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Speakers</td>
+                        <td>
+                            <div ng-repeat="presenter in talk.presenters">
+                                <label><span>{{presenter.name}}</span></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td>Topics</td>
+                        <td>
+                            <div ng-repeat="topic in talk.topics">
+                                <label><span>{{topic.name}}</span></label>
+                            </div>
+                        </td>
+                    </tr>
+                    -->
+
+                    <!-- show other details here -->
+
+                    <!-- single-select -->
+                    <tr>
+                        <td>Track</td>
+                        <td>
+                            <div class="form-group">
+                                <div ng-controller="TrackController">
+                                    <select class="form-control input-sm" ng-model="talk.track" ng-change="objectifyTeacher()">
+                                        <option ng-selected="track.name == talk.track.name"
+                                                ng-repeat="track in tracks track by track.id" value="{{track}}" >
+                                            {{track.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        <td>
+                    </tr>
+
+                    <tr>
+                        <td>Slot</td>
+                        <td>
+                            <div class="form-group">
+                                <div ng-controller="TimeslotController">
+                                    <select class="form-control input-sm" ng-model="talk.timeslot" ng-change="objectifyTeacher()">
+                                        <option ng-selected="timeslot.name == talk.timeslot.name"
+                                                ng-repeat="timeslot in timeslots track by timeslot.id" value="{{timeslot}}" >
+                                            {{timeslot.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        <td>
+                    </tr>
+
+                    <!-- multi-select -->
+                    <tr>
+                        <td><span>Change Speakers for this Talk</span></td>
+                        <td>
+                            <div class="well view" ng-controller="SpeakerController">
+                                <div ng-repeat="speaker in speakers track by speaker.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!--
+
+                    <tr>
+                        <td><span>Change Topics</span></td>
+                        <td>
+                            <div ng-controller="TopicController">
+                                <div ng-repeat="topic in topics track by topic.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    -->
+
+                </tbody>
+            </table>
+
+            <!--
+            <div class="panel-group" id="speakerAccordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="javascript:;" data-toggle="collapse" data-parent="#speakerAccordion" data-target="#collapseSpeaker">
+                            <label><span>Select speakers</span></label>
+                        </a>
+                    </div>
+                    <div id="collapseSpeaker" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-controller="SpeakerController">
+                                <div ng-repeat="speaker in speakers track by speaker.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group" id="topicAccordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="javascript:;" data-toggle="collapse" data-parent="#topicAccordion" data-target="#collapseTopic">
+                            <label><span>Select topics</span></label>
+                        </a>
+                    </div>
+                    <div id="collapseTopic" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-controller="TopicController">
+                                <div ng-repeat="topic in topics track by topic.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div ng-controller="SpeakerController">
+                <div ng-repeat="speaker in speakers track by speaker.id" >
+                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                </div>
+            </div>
+
+            <div ng-controller="TopicController">
+                <div ng-repeat="topic in topics track by topic.id" >
+                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                </div>
+            </div>
+            -->
+
+            <!--
+            <accordion close-others="true">
+                <accordion-group heading="Change speakers" is-open="false">
+                    <div ng-repeat="speaker in speakers track by speaker.id" >
+                        <label><input type="checkbox" class="form control pull-left" checklist-model="talk.presenters" checklist-value="speaker" />&nbsp;{{speaker.name}}</label>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Change topics" is-open="false">
+                    <div ng-repeat="topic in topics track by topic.id" >
+                        <label><input type="checkbox" class="form control pull-left" checklist-model="talk.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                    </div>
+                </accordion-group>
+            </accordion>
+            -->
+            <!--
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="javascript:;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+                                Set topics
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-controller="TopicController">
+                                <div ng-repeat="topic in topics track by topic.id" >
+                                    <label><input type="checkbox" class="form control pull-left" checklist-model="talk.topics" checklist-value="topic" />&nbsp;{{topic.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </form>
+    </div>
+
+    <div class="modal fade" id="deleteTalkConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-controller="TalkController">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete Talk {{talk.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+
+                        <button type="button" class="btn btn-danger" ng-click="confirmDelete(talk.id)">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>

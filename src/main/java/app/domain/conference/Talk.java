@@ -1,5 +1,6 @@
 package app.domain.conference;
 
+import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 
 import java.util.Set;
@@ -7,7 +8,8 @@ import java.util.Set;
 /**
  * @author: Vince Bickers
  */
-public class Session extends Entity {
+@NodeEntity(label="Session")
+public class Talk extends Entity {
 
     @Relationship(type="AT_TIMESLOT", direction= Relationship.OUTGOING)
     private Timeslot timeslot;

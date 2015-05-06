@@ -92,42 +92,15 @@ Browser Upgrade Prompt
     width: 180px;
     height: 90px;
     margin-right: 10px;
-    background:url("../images/spring-io.png") no-repeat center top;
-    //background: url("../images/chevron-chief-crossbotony-233x300.png") no-repeat center top;
+    background:url("../images/graph-connect-logo.png") no-repeat center top;
     background-size: contain;
-}
-
-.Mathematics {
-    display: inline-block;
-    margin-right: 10px;
-    background: url("../images/mathematics-dept.jpg") top;
-    width:100%;
-    height:50px;
-}
-
-.Science {
-    display: inline-block;
-    margin-right: 10px;
-    background: url("../images/science-dept.jpg") top;
-    width:100%;
-    height:50px;
-}
-
-.Engineering {
-    display: inline-block;
-    margin-right: 10px;
-    background: url("../images/engineering-dept.JPG") top;
-    width:100%;
-    height:50px;
 }
 
 .register {
     display: inline-block;
-    width: 347px;
+    width: 350px;
     height: 600px;
-    //background:url("../images/spring-io.jpeg") no-repeat center top;
-    //background: url("../images/student-register.jpg") no-repeat center top;
-    background: url("../images/auditorium.jpg") no-repeat center top;
+    background: url("../images/linus-graph-theory.JPG") no-repeat center top;
     background-size: contain;
 }
 

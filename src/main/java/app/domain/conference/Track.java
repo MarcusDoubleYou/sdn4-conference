@@ -10,17 +10,17 @@ import java.util.Set;
 public class Track extends Entity {
 
     @Relationship(type="IN_TRACK", direction= Relationship.INCOMING)
-    private Set<Session> sessions;
+    private Set<Talk> talks;
 
     @Relationship(type="HAS_TRACK", direction= Relationship.INCOMING)
     private Conference conference;
 
-    public Set<Session> getSessions() {
-        return sessions;
+    public Set<Talk> getTalks() {
+        return talks;
     }
 
-    public void setSessions(Set<Session> sessions) {
-        this.sessions = sessions;
+    public void setTalks(Set<Talk> talks) {
+        this.talks = talks;
     }
 
     public Conference getConference() {

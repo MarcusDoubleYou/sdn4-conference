@@ -10,17 +10,17 @@ import java.util.Set;
 public class Speaker extends Entity {
 
     @Relationship(type="PRESENTS")
-    private Set<Session> sessionsPresented;
+    private Set<Talk> talksPresented;
 
     @Relationship(type="REGISTERED_FOR", direction= Relationship.OUTGOING)
     private Conference conference;
 
-    public Set<Session> getSessionsPresented() {
-        return sessionsPresented;
+    public Set<Talk> getTalksPresented() {
+        return talksPresented;
     }
 
-    public void setSessionsPresented(Set<Session> sessionsPresented) {
-        this.sessionsPresented = sessionsPresented;
+    public void setTalksPresented(Set<Talk> talksPresented) {
+        this.talksPresented = talksPresented;
     }
 
     public Conference getConference() {

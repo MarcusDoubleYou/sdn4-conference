@@ -1,6 +1,6 @@
 package app.service.conference;
 
-import app.domain.conference.Session;
+import app.domain.conference.Talk;
 import app.repository.conference.SessionRepository;
 import app.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,21 +11,21 @@ import org.springframework.stereotype.Service;
  * @author: Vince Bickers
  */
 @Service
-public class SessionService extends GenericService<Session> {
+public class TalkService extends GenericService<Talk> {
 
     @Autowired
     private SessionRepository repository;
 
     @Override
-    public GraphRepository<Session> getRepository() {
+    public GraphRepository<Talk> getRepository() {
         return repository;
     }
 
-    public Iterable<Session> findByName(String name) {
+    public Iterable<Talk> findByName(String name) {
         return repository.findByName(name);
     }
 
-    public Iterable<Session> findSimilar(Long id) {
+    public Iterable<Talk> findSimilar(Long id) {
         return repository.findSimilar(id);
     }
 }

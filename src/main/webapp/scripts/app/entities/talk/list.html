@@ -1,12 +1,12 @@
 <div>
 
-    <h2>Session</h2>
+    <h2>Talk</h2>
 
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveSessionModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> <span>Create a new Session</span>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveTalkModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span>Create a new Talk</span>
     </button>
 
-    <div class="modal fade" id="saveSessionModal" tabindex="-1" role="dialog" aria-labelledby="mySessionLabel"
+    <div class="modal fade" id="saveTalkModal" tabindex="-1" role="dialog" aria-labelledby="myTalkLabel"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -17,13 +17,13 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="mySessionLabel">Create or edit a Session</h4>
+                        <h4 class="modal-title" id="myTalkLabel">Create a Talk</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" class="form-control"
-                                   ng-model="session.name">
+                                   ng-model="talk.name">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -46,8 +46,8 @@
     <div class="table-responsive view">
         <table class="table table-striped">
             <tbody>
-                <tr ng-repeat="session in sessions | filter:searchText track by session.id">
-                    <td><a ng-model="session.name" ui-sref="sessionDetail({id:session.id})">{{session.id}}:{{session.name}}</a></td>
+                <tr ng-repeat="talk in talks | filter:searchText track by talk.id">
+                    <td><a ng-model="talk.name" ui-sref="talkDetail({id:talk.id})">{{talk.id}}:{{talk.name}}</a></td>
                 </tr>
             </tbody>
         </table>

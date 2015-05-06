@@ -21,7 +21,7 @@
                 </button>
             </div>
 
-            <table class="table table-striped">
+            <table class="table">
                 <thead>
                     <tr>
                         <th translate="entity.detail.field">Field</th>
@@ -36,12 +36,12 @@
 
                     <!-- todo show other details here -->
                     <tr>
-                        <td><span>Sessions</span></td>
+                        <td><span>Talks</span></td>
                         <td>
                             <div class="well view">
-                                <div ng-controller="SessionController">
-                                    <div ng-repeat="session in sessions track by session.id" >
-                                        <label><input type="checkbox" class="form control pull-left" checklist-model="track.sessions" checklist-value="session" />&nbsp;{{session.name}}</label>
+                                <div ng-controller="TalkController">
+                                    <div ng-repeat="talk in talks track by talk.id" >
+                                        <label><input type="checkbox" class="form control pull-left" checklist-model="track.talks" checklist-value="talk" />&nbsp;{{talk.name}}</label>
                                     </div>
                                 </div>
                             </div>

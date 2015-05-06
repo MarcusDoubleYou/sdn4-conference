@@ -1,11 +1,11 @@
 <div>
 
-    <h2 translate="sessions.title" translate-values="{username: '{{account.login}}'}">Active sessions for [<b>{{account.login}}</b>]</h2>
+    <h2 translate="talks.title" translate-values="{username: '{{account.login}}'}">Active talks for [<b>{{account.login}}</b>]</h2>
 
-    <div class="alert alert-success" ng-show="success" translate="sessions.messages.success">
+    <div class="alert alert-success" ng-show="success" translate="talks.messages.success">
         <strong>Session invalidated!</strong>
     </div>
-    <div class="alert alert-danger" ng-show="error" translate="sessions.messages.error">
+    <div class="alert alert-danger" ng-show="error" translate="talks.messages.error">
         <strong>An error has occured!</strong> The session could not be invalidated.
     </div>
 
@@ -13,21 +13,21 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th translate="sessions.table.ipaddress">IP Address</th>
-                    <th translate="sessions.table.useragent">User agent</th>
-                    <th translate="sessions.table.date">Date</th>
+                    <th translate="talks.table.ipaddress">IP Address</th>
+                    <th translate="talks.table.useragent">User agent</th>
+                    <th translate="talks.table.date">Date</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="session in sessions">
+                <tr ng-repeat="session in talks">
                     <td>{{session.ipAddress}}</td>
                     <td>{{session.userAgent}}</td>
                     <td>{{session.formattedTokenDate}}</td>
                     <td>
                         <button type="submit"
                                 class="btn btn-primary"
-                                ng-click="invalidate(session.series)" translate="sessions.table.button">
+                                ng-click="invalidate(session.series)" translate="talks.table.button">
                                  Invalidate
                         </button>
                     </td>
